@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="aosp"
+            fetch="https://android.googlesource.com"
+            review="https://android-review.googlesource.com"
+            revision="master-kernel-build-2021" />
+
+    <default sync-j="8" />
+
+    <project path="build" name="kernel/build" groups="google" remote="aosp" />
+    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android-gs-raviole-5.10-android12-d1" />
+    <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
+    <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
+    <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />
+    <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts/gas/linux-x86" name="platform/prebuilts/gas/linux-x86" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
+    <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
+    <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
+    <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
+    <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
+    <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" />
+
+</manifest>
