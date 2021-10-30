@@ -9,7 +9,7 @@
     <default sync-j="8" />
 
     <project path="build" name="kernel/build" groups="google" remote="aosp" />
-    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android-gs-raviole-5.10-android12-d1" />
+    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
     <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" />
