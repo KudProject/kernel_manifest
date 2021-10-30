@@ -20,7 +20,7 @@
     <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />
     <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
-    <project path="prebuilts/gas/linux-x86" name="platform/prebuilts/gas/linux-x86" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts/gas/linux-x86" name="prebuilts_gas_linux-x86" groups="google" clone-depth="1" remote="kud-github" revision="main" />
     <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="arm-linux-androideabi-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp" />
