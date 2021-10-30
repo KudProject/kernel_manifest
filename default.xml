@@ -6,6 +6,10 @@
             review="https://android-review.googlesource.com"
             revision="master-kernel-build-2021" />
 
+    <remote name="kud-github"
+            fetch="https://github.com/KudProject"
+            pushurl="ssh://git@github.com/KudProject" />
+
     <default sync-j="8" />
 
     <project path="build" name="kernel/build" groups="google" remote="aosp" />
