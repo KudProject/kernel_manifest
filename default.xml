@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+    <!-- Remotes -->
     <remote name="aosp"
             fetch="https://android.googlesource.com"
             review="https://android-review.googlesource.com"
@@ -13,8 +14,10 @@
     <remote name="aospa-blobs"
             fetch="https://github.com/ThankYouMario" />
 
+    <!-- Defaults -->
     <default sync-j="8" />
 
+    <!-- AOSP projects -->
     <project path="build" name="kernel/build" groups="google" remote="aosp" />
     <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
@@ -31,5 +34,7 @@
     <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
     <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
     <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" />
+
+    <!-- KudProject additions -->
 
 </manifest>
