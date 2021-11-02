@@ -11,6 +11,10 @@
             fetch="https://github.com/KudProject"
             pushurl="ssh://git@github.com/KudProject" />
 
+    <remote name="kud-gitlab"
+            fetch="https://gitlab.com/KudProject"
+            pushurl="ssh://git@gitlab.com/KudProject" />
+
     <remote name="aospa-blobs"
             fetch="https://github.com/ThankYouMario" />
 
