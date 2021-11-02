@@ -19,7 +19,9 @@
             fetch="https://github.com/ThankYouMario" />
 
     <!-- Defaults -->
-    <default sync-j="8" />
+    <default sync-c="true"
+             sync-j="8"
+             sync-tags="false" />
 
     <!-- AOSP projects -->
     <project path="build" name="kernel/build" groups="google" remote="aosp" />
