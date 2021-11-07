@@ -24,7 +24,7 @@
              sync-tags="false" />
 
     <!-- AOSP projects -->
-    <project path="build" name="kernel/build" groups="google" remote="aosp" />
+    <project path="build" name="kernel_build" groups="google" remote="kud-github" revision="android-12.0" />
     <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
