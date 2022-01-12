@@ -32,7 +32,7 @@
     <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
     <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" />
-    <project path="prebuilts-master/clang/host/linux-x86/clang-r433403b" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r433403b" />
+    <project path="prebuilts-master/clang/host/linux-x86/clang-r437112" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r437112" />
     <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />
     <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
