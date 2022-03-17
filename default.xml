@@ -31,8 +31,8 @@
     <project path="build" name="kernel_build" groups="google" remote="kud-github" />
     <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel_configs" groups="google" remote="kud-github" />
-    <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
-    <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" />
+    <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
+    <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
     <project path="prebuilts-master/clang/host/linux-x86/clang-r437112b" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r437112b" />
     <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />
@@ -44,7 +44,7 @@
     <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
     <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
     <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" />
-    <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" />
+    <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
 
     <!-- KudProject additions -->
     <project path="build-configs" name="kernel_build-configs" groups="kud" remote="kud-github">
