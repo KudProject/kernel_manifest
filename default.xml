@@ -53,7 +53,7 @@
     <project path="private/msm-modules/cld3_wlan-5.2.022" name="vendor_qcom_opensource_wlan_qcacld-3.0" groups="kud" remote="kud-github" revision="5.2.022" />
     <project path="private/msm-modules/cld3_wlan-5.2.03" name="vendor_qcom_opensource_wlan_qcacld-3.0" groups="kud" remote="kud-github" revision="5.2.03" />
     <project path="private/msm-modules/pronto_wlan" name="vendor_qcom_opensource_wlan_prima" groups="kud" remote="kud-github" revision="LA.UM.9.6.4" />
-    <project path="private/msm-xiaomi-thorium-4.9" name="mi-msm8937/android_kernel_xiaomi_msm8937" groups="mi8937" remote="github" revision="a12/master" />
+    <project path="private/msm-xiaomi-thorium-4.9" name="kernel_xiaomi_msm8937" groups="kud,mi8937" remote="kud-github" revision="moe-stable/android-12.0" />
     <project path="vendor/qcom/proprietary/llvm-arm-toolchain-ship/12.0" name="vendor/qcom/proprietary/llvm-arm-toolchain-ship" groups="kud" clone-depth="1" remote="kud-gitlab-priv" revision="12.0" />
     <project path="vendor/qcom/proprietary/llvm-arm-toolchain-ship/14.0" name="vendor/qcom/proprietary/llvm-arm-toolchain-ship" groups="kud" clone-depth="1" remote="kud-gitlab-priv" revision="14.0" />
 
