@@ -35,7 +35,7 @@
     <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
     <project path="prebuilts-master/clang/host/linux-x86/clang-r437112b" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r437112b" />
     <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
-    <project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />
+    <!--<project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />-->
     <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts/gas/linux-x86" name="prebuilts_gas_linux-x86" groups="google" clone-depth="1" remote="kud-github" revision="main" />
     <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
