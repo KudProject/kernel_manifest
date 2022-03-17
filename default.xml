@@ -12,7 +12,8 @@
 
     <remote name="kud-github"
             fetch="https://github.com/KudProject"
-            pushurl="ssh://git@github.com/KudProject" />
+            pushurl="ssh://git@github.com/KudProject"
+            revision="android-12.1" />
 
     <remote name="kud-gitlab"
             fetch="https://gitlab.com/KudProject"
@@ -27,9 +28,9 @@
              sync-tags="false" />
 
     <!-- AOSP projects -->
-    <project path="build" name="kernel_build" groups="google" remote="kud-github" revision="android-12.0" />
+    <project path="build" name="kernel_build" groups="google" remote="kud-github" />
     <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
-    <project path="kernel/configs" name="kernel/configs" groups="google" remote="aosp" />
+    <project path="kernel/configs" name="kernel_configs" groups="google" remote="kud-github" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" />
     <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts-master/clang/host/linux-x86/clang-r437112b" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r437112b" />
@@ -42,11 +43,11 @@
     <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp" />
     <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
     <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
-    <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" revision="android-12.0" />
+    <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" />
     <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" />
 
     <!-- KudProject additions -->
-    <project path="build-configs" name="kernel_build-configs" groups="kud" remote="kud-github" revision="android-12.0">
+    <project path="build-configs" name="kernel_build-configs" groups="kud" remote="kud-github">
         <linkfile src="msm-4.9/build.config.sdm670.aarch64.clang_sdllvm" dest="build.config" />
     </project>
     <project path="private/msm-android-qcom-4.9" name="kernel_msm-4.9" groups="kud" remote="kud-github" revision="a11/master" />
