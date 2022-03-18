@@ -40,7 +40,6 @@
     <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="arm-linux-androideabi-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp" />
-    <project path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="android10-qpr3-s1-release" />
     <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
     <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" />
     <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
