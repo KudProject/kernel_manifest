@@ -32,7 +32,6 @@
     <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel_configs" groups="google" remote="kud-github" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
-    <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
     <project path="prebuilts-master/clang/host/linux-x86/clang-r445002" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r445002" />
     <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
     <!--<project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />-->
