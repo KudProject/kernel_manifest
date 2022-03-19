@@ -2,10 +2,15 @@
 <manifest>
 
     <!-- Remotes -->
-    <remote name="aosp"
+    <remote name="aosp-kernel"
             fetch="https://android.googlesource.com"
             review="https://android-review.googlesource.com"
             revision="master-kernel-build-2021" />
+
+    <remote name="aosp-platform"
+            fetch="https://android.googlesource.com"
+            review="https://android-review.googlesource.com"
+            revision="refs/tags/android-12.1.0_r1" />
 
     <remote name="github"
             fetch="https://github.com" />
@@ -29,20 +34,20 @@
 
     <!-- AOSP projects -->
     <project path="build" name="kernel_build" groups="google" remote="kud-github" />
-    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp" revision="android12-5.10" />
+    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp-kernel" revision="android12-5.10" />
     <project path="kernel/configs" name="kernel_configs" groups="google" remote="kud-github" />
-    <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
+    <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp-platform" />
     <project path="prebuilts-master/clang/host/linux-x86/clang-r445002" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r445002" />
-    <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp" />
-    <!--<project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp" />-->
-    <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp" />
+    <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp-kernel" />
+    <!--<project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp-kernel" />-->
+    <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp-kernel" />
     <project path="prebuilts/gas/linux-x86" name="prebuilts_gas_linux-x86" groups="google" clone-depth="1" remote="kud-github" revision="main" />
     <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="arm-linux-androideabi-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
-    <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp" />
-    <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
+    <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp-platform" />
+    <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp-platform" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
     <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" />
-    <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp" revision="refs/tags/android-12.1.0_r1" />
+    <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp-platform" />
 
     <!-- KudProject additions -->
     <project path="build-configs" name="kernel_build-configs" groups="kud" remote="kud-github">
