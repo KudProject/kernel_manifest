@@ -5,12 +5,16 @@
     <remote name="aosp-kernel"
             fetch="https://android.googlesource.com"
             review="https://android-review.googlesource.com"
-            revision="master-kernel-build-2021" />
+            revision="master-kernel-build-2022" />
 
     <remote name="aosp-platform"
             fetch="https://android.googlesource.com"
             review="https://android-review.googlesource.com"
-            revision="refs/tags/android-12.1.0_r1" />
+            revision="refs/tags/android-13.0.0_r32" />
+
+    <remote name="codelinaro"
+            fetch="https://git.codelinaro.org/clo/la"
+            revision="refs/tags/KERNEL.PLATFORM.2.0.r1-10800-kernel.0" />
 
     <remote name="github"
             fetch="https://github.com" />
@@ -33,22 +37,60 @@
              sync-tags="false" />
 
     <!-- AOSP projects -->
-    <project path="build" name="kernel_build" groups="google" remote="kud-github" />
-    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp-kernel" revision="android12-5.10" />
+    <project path="build/bazel_common_rules" name="platform/build/bazel_common_rules" groups="google" remote="aosp-kernel" />
+    <project path="build/kernel" name="kernel_build" groups="google" remote="kud-github" revision="android-13.0">
+        <linkfile src="kleaf/bazel.sh" dest="tools/bazel" />
+        <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
+        <linkfile src="build.sh" dest="build/build.sh" />
+        <linkfile src="build_abi.sh" dest="build/build_abi.sh" />
+        <linkfile src="build_test.sh" dest="build/build_test.sh" />
+        <linkfile src="build_utils.sh" dest="build/build_utils.sh" />
+        <linkfile src="build-tools/path" dest="build/build-tools/path" />
+        <linkfile src="config.sh" dest="build/config.sh" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="_setup_env.sh" dest="build/_setup_env.sh" />
+        <linkfile src="multi-switcher.sh" dest="build/multi-switcher.sh" />
+        <linkfile src="abi" dest="build/abi" />
+        <linkfile src="static_analysis" dest="build/static_analysis" />
+        <!-- Google additions, present on Pixel kernel manifests -->
+        <linkfile src="BUILD.bazel" dest="build/BUILD.bazel" />
+        <linkfile src="kleaf" dest="build/kleaf" />
+        <!-- QUIC additions -->
+        <linkfile src="build_abl.sh" dest="build/build_abl.sh" />
+        <linkfile src="build_module.sh" dest="build/build_module.sh" />
+        <linkfile src="all-variants.sh" dest="build/all-variants.sh" />
+        <linkfile src="brunch" dest="build/brunch" />
+        <linkfile src="_wrapper_common.sh" dest="build/_wrapper_common.sh" />
+        <linkfile src="android" dest="build/android" />
+    </project>
+    <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" groups="google" remote="aosp-kernel" revision="android13-5.15" />
+    <project path="external/bazel-skylib" name="platform/external/bazel-skylib" groups="google" remote="aosp-kernel" />
+    <project path="external/python/absl-py" name="platform/external/python/absl-py" groups="google" remote="aosp-platform" revision="refs/tags/android-u-beta-1-gpl" />
+    <project path="external/stardoc" name="platform/external/stardoc" groups="google" remote="aosp-kernel" />
     <project path="kernel/configs" name="kernel_configs" groups="google" remote="kud-github" />
     <project path="kernel/tests" name="kernel/tests" groups="google" remote="aosp-platform" />
-    <project path="prebuilts-master/clang/host/linux-x86/clang-r445002" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r445002" />
-    <project path="prebuilts-master/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp-kernel" />
+    <project path="prebuilts/bazel/linux-x86_64" name="platform/prebuilts/bazel/linux-x86_64" groups="google" clone-depth="1" remote="aosp-kernel" />
     <!--<project path="prebuilts/boot-artifacts" name="platform/prebuilts/boot-artifacts" groups="google" remote="aosp-kernel" />-->
-    <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp-kernel" />
+    <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp-kernel">
+        <linkfile src="." dest="build/prebuilts/build-tools" />
+    </project>
+    <project path="prebuilts/clang/host/linux-x86/clang-r445002" name="prebuilts/clang/host/linux-x86" groups="google" clone-depth="1" remote="kud-gitlab" revision="r445002" />
     <project path="prebuilts/gas/linux-x86" name="prebuilts_gas_linux-x86" groups="google" clone-depth="1" remote="kud-github" revision="main" />
     <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aarch64-linux-android-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="arm-linux-androideabi-4.9" groups="google" clone-depth="1" remote="kud-github" revision="master" />
     <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="google" clone-depth="1" remote="aosp-platform" />
     <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="google" clone-depth="1" remote="aosp-platform" revision="c5e1eaa599a8fb0caa5ca35a2fd3d998c160f711" />
-    <project path="prebuilts/kernel-build-tools" name="kernel_prebuilts_build-tools" groups="google" clone-depth="1" remote="kud-github" />
+    <project path="prebuilts/jdk/jdk11" name="platform/prebuilts/jdk/jdk11" groups="google" clone-depth="1" remote="aosp-kernel" />
+    <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" groups="google" clone-depth="1" remote="aosp-kernel">
+        <linkfile src="." dest="build/prebuilts/kernel-build-tools" />
+    </project>
+    <project path="prebuilts/misc" name="platform/prebuilts/misc" groups="google" clone-depth="1" remote="aosp-kernel" />
+    <project path="prebuilts/ndk-r23" name="toolchain/prebuilts/ndk/r23" groups="google" clone-depth="1" remote="aosp-kernel" />
     <project path="tools/avb" name="platform/external/avb" groups="google" remote="aosp-platform" />
     <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" groups="google" remote="aosp-platform" />
+
+    <!-- QUIC projects -->
+    <project path="external/dtc" name="kernel_platform/external/dtc" groups="quic" remote="codelinaro" />
 
     <!-- KudProject additions -->
     <project path="build-configs" name="kernel_build-configs" groups="kud" remote="kud-github">
